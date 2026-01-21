@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button"
 
-export default function Home() {
+export default function ServicesPage() {
   return (
     <div>
-      <p>Homepage</p>
+      <p>Services Page</p>
       <Button variant="outline">Button</Button>
     </div>
   );
