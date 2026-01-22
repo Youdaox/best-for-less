@@ -55,33 +55,52 @@ const ListItem = ({
 
 const Navbar = () => {
   return (
-    <NavigationMenu>
-      <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuLink>Home</NavigationMenuLink>
-          </NavigationMenuItem>
+    <div className="flex shadow-md rounded-md items-center justify-around max-w-7xl mx-auto mt-2">
 
-          <NavigationMenuItem>
-          <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-100 gap-2 md:w-125 md:grid-cols-2 lg:w-150">
-              {components.map(c => (
-                <ListItem
-                  key={c.title}
-                  title={c.title}
-                  href={c.href}
-                >
-                  {c.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-          </NavigationMenuItem>
+      <NavigationMenu className="py-5 px-4 w-full">
+        <NavigationMenuList className="flex gap-10 text-lg">
+          
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild>
+                <Link href="/">
+                  Home
+                </Link>
+                </NavigationMenuLink>
+            </NavigationMenuItem>
 
-          <NavigationMenuLink>About</NavigationMenuLink>
-          <NavigationMenuLink>Contact</NavigationMenuLink>
-      </NavigationMenuList>
-    </NavigationMenu>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="mt-2.5 grid w-[400px] gap-3 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                  {components.map(c => (
+                    <ListItem
+                      key={c.title}
+                      title={c.title}
+                      href={c.href}
+                    >
+                      {c.description}
+                    </ListItem>
+                  ))}
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild>
+                <Link href="/about">About</Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild>
+                <Link href="/contact">Contact</Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+
+        </NavigationMenuList>
+      </NavigationMenu>
+      <div>language</div>
+    </div>
   )
 };
 
