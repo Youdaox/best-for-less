@@ -1,3 +1,4 @@
+import Services from "@/components/sections/services";
 import { Button } from "@/components/ui/button"
 
 export default function Home() {
@@ -5,7 +6,7 @@ export default function Home() {
     <div>
       <p>Homepage</p>
       <Button variant="outline">Button</Button>
-      <p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p><p>Homepage</p>
+      <Services />
     </div>
   );
 }
