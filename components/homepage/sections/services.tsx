@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 const components = [
   { title: "Office Movers", description: "We provide top-notch office moving services to ensure a smooth transition for your business." },
   { title: "Furniture Movers", description: "Our expert team handles your furniture with care, ensuring safe and efficient moves." },

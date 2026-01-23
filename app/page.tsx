@@ -1,11 +1,10 @@
-import Services from "@/components/sections/services";
-import { Button } from "@/components/ui/button"
+import Hero from "@/components/homepage/sections/hero";
+import Services from "@/components/homepage/sections/services";
 
 export default function Home() {
   return (
     <div>
-      <p>Homepage</p>
-      <Button variant="outline">Button</Button>
+      <Hero />
       <Services />
     </div>
   );
