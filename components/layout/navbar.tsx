@@ -32,6 +32,9 @@ const components: { title: string; href: string; description: string }[] = [
     href: "/services",
     description: "Visually or semantically separates content.",
   },
+  { title: "Item Removal",
+    href: "/services",
+    description: "Efficient and responsible removal of unwanted items from your premises." },
 ]
 const ListItem = ({
   title,
@@ -55,7 +58,7 @@ const ListItem = ({
 
 const Navbar = () => {
   return (
-    <div className="flex shadow-md rounded-md items-center justify-around max-w-7xl mx-auto mt-2">
+    <div className="flex shadow-md rounded-md items-center justify-around mx-auto mt-2">
 
       <NavigationMenu className="py-5 px-4 w-full">
         <NavigationMenuList className="flex gap-10 text-lg">
@@ -71,7 +74,7 @@ const Navbar = () => {
             <NavigationMenuItem>
               <NavigationMenuTrigger>Services</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="mt-2.5 grid w-[400px] gap-3 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                <ul className="mt-2.5 grid w-100 gap-3 md:w-125 md:grid-cols-2 lg:w-150">
                   {components.map(c => (
                     <ListItem
                       key={c.title}
