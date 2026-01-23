@@ -58,8 +58,8 @@ const ListItem = ({
 
 const Navbar = () => {
   return (
-    <div className="flex shadow-md rounded-md items-center justify-around mx-auto mt-2">
-
+    <div className="flex shadow-md rounded-md items-center justify-around mt-2">
+      <img src="/logo.png" alt="Logo" className="h-10 w-10" />
       <NavigationMenu className="py-5 px-4 w-full">
         <NavigationMenuList className="flex gap-10 text-lg">
           

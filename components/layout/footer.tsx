@@ -2,21 +2,16 @@ const Footer = () => {
   return (
     <div className="max-w-full">
       <div className="bg-border flex flex-col md:flex-row lg:flex-row justify-center mx-30 rounded-lg">
-        <div className="container mx-auto flex justify-center px-24 flex-col mt-10 py-6">
-          <h1 className="text-3xl font-bold">Contact us</h1>
-          <ul>
-            <li>Email: email@example.com</li>
-            <li>Phone: +1 234 567 890</li>
-            <li>Address: 123 Main St</li> 
-          </ul>
-        </div>
-        <div className="container mx-auto flex justify-center px-24 flex-col mt-10 py-6">
-          <h1 className="text-3xl font-bold">FAQ</h1>
-          <ul>
-            <li>Email: email@example.com</li>
-            <li>Phone: +1 234 567 890</li>
-            <li>Address: 123 Main St</li> 
-          </ul>
+        <div className="container mx-auto flex justify-center items-center px-24 flex-row mt-10 py-6 gap-6">
+          <img src="/logo.png" alt="Logo" className="h-20 w-20 mb-4" />
+          <div>
+            <h1 className="text-3xl font-bold">Contact us</h1>
+            <ul>
+              <li>Email: email@example.com</li>
+              <li>Phone: +1 234 567 890</li>
+              <li>Address: 123 Main St</li> 
+            </ul>
+          </div>
         </div>
         <div className="container mx-auto flex justify-center px-24 flex-col mt-10 py-6">
           <h1 className="text-3xl font-bold">Services</h1>
