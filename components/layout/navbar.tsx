@@ -60,49 +60,51 @@ const Navbar = () => {
   return (
     <div className="flex shadow-md rounded-md items-center justify-around mt-2">
       <img src="/logo.png" alt="Logo" className="h-10 w-10" />
-      <NavigationMenu className="py-5 px-4 w-full">
-        <NavigationMenuList className="flex gap-10 text-lg">
-          
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild>
-                <Link href="/">
-                  Home
-                </Link>
-                </NavigationMenuLink>
-            </NavigationMenuItem>
+      <div className="flex items-center gap-20">
+        <NavigationMenu className="py-5 px-4 w-full">
+            <NavigationMenuList className="flex gap-10 text-lg">
+              
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <Link href="/">
+                      Home
+                    </Link>
+                    </NavigationMenuLink>
+                </NavigationMenuItem>
 
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="mt-2.5 grid w-100 gap-3 md:w-125 md:grid-cols-2 lg:w-150">
-                  {components.map(c => (
-                    <ListItem
-                      key={c.title}
-                      title={c.title}
-                      href={c.href}
-                    >
-                      {c.description}
-                    </ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild>
-                <Link href="/about">About</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="mt-2.5 grid w-100 gap-3 md:w-125 md:grid-cols-2 lg:w-150">
+                      {components.map(c => (
+                        <ListItem
+                          key={c.title}
+                          title={c.title}
+                          href={c.href}
+                        >
+                          {c.description}
+                        </ListItem>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+                
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <Link href="/about">About</Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
 
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild>
-                <Link href="/contact">Contact</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <Link href="/contact">Contact</Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
 
-        </NavigationMenuList>
-      </NavigationMenu>
-      <div>language</div>
+            </NavigationMenuList>
+        </NavigationMenu>
+        <div>language</div>
+      </div>
     </div>
   )
 };
