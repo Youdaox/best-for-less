@@ -53,7 +53,7 @@ const QuoteForm = () => {
   }
 
   return (
-    <div className="container flex justify-center m-16">
+    <div className="flex justify-center m-16 shadow-lg w-1/3 p-10 rounded-lg bg-white">
       <form onSubmit={handleSubmit}>
           <h1 className="text-4xl font-bold m-10">Where are you moving from?</h1>
           <FieldGroup className="gap-4">
