@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/navigation-menu"
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -59,13 +60,28 @@ const ListItem = ({
 }
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false)
+  
+  useEffect(() => {
+    let lastScrollY = 0;
+
+    const onScroll = () => {
+      const currentScrollY = window.scrollY;
+      setScrolled(window.scrollY > lastScrollY);
+      lastScrollY = currentScrollY;
+    }
+
+    window.addEventListener("scroll", onScroll)
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
+
   return (
-    <div className="flex mx-24 shadow-md rounded-lg items-center justify-around bg-zinc-50">
+    <div className={`flex shadow-md rounded-b-lg items-center justify-around bg-zinc-50 fixed left-0 right-0 z-50 transition-all duration-300 ease-in-out ${scrolled ? "-translate-y-full" : "top-0"}`}>
         <div className="relative">
-          <Image src="/logo.png" alt="Logo" width={100} height={100} />
+          <h1 className="text-4xl font-extrabold">BEST FOR LESS</h1>
         </div>
         <div className="flex items-center gap-20">
-          <NavigationMenu className="py-5 px-4 w-full">
+          <NavigationMenu className="py-4 px-4 w-full">
               <NavigationMenuList className="flex gap-10 text-lg">
                 
                   <NavigationMenuItem>
