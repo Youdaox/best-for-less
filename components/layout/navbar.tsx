@@ -1,3 +1,4 @@
+"use client"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -7,6 +8,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import Link from "next/link";
+import Image from "next/image";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -58,53 +60,56 @@ const ListItem = ({
 
 const Navbar = () => {
   return (
-    <div className="flex shadow-md rounded-md items-center justify-around mt-2">
-      <img src="/logo.png" alt="Logo" className="h-10 w-10" />
-      <div className="flex items-center gap-20">
-        <NavigationMenu className="py-5 px-4 w-full">
-            <NavigationMenuList className="flex gap-10 text-lg">
-              
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild>
-                    <Link href="/">
-                      Home
-                    </Link>
-                    </NavigationMenuLink>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="mt-2.5 grid w-100 gap-3 md:w-125 md:grid-cols-2 lg:w-150">
-                      {components.map(c => (
-                        <ListItem
-                          key={c.title}
-                          title={c.title}
-                          href={c.href}
-                        >
-                          {c.description}
-                        </ListItem>
-                      ))}
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
+    <div className="flex mx-24 shadow-md rounded-lg items-center justify-around bg-zinc-50">
+        <div className="relative">
+          <Image src="/logo.png" alt="Logo" width={100} height={100} />
+        </div>
+        <div className="flex items-center gap-20">
+          <NavigationMenu className="py-5 px-4 w-full">
+              <NavigationMenuList className="flex gap-10 text-lg">
                 
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild>
-                    <Link href="/about">About</Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <NavigationMenuLink asChild>
+                      <Link href="/">
+                        Home
+                      </Link>
+                      </NavigationMenuLink>
+                  </NavigationMenuItem>
 
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild>
-                    <Link href="/contact">Contact</Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <ul className="mt-2.5 grid w-100 gap-3 md:w-125 md:grid-cols-2 lg:w-150">
+                        {components.map(c => (
+                          <ListItem
+                            key={c.title}
+                            title={c.title}
+                            href={c.href}
+                          >
+                            {c.description}
+                          </ListItem>
+                        ))}
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                  
+                  <NavigationMenuItem>
+                    <NavigationMenuLink asChild>
+                      <Link href="/about">About</Link>
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
 
-            </NavigationMenuList>
-        </NavigationMenu>
-        <div>language</div>
-      </div>
+                  <NavigationMenuItem>
+                    <NavigationMenuLink asChild>
+                      <Link href="/contact">Contact</Link>
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+
+              </NavigationMenuList>
+          </NavigationMenu>
+          <div>language</div>
+        </div>
+      
     </div>
   )
 };

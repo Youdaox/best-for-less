@@ -1,9 +1,13 @@
+import Image from "next/image";
+
 const Footer = () => {
   return (
     <div className="max-w-full">
       <div className="bg-border flex flex-col md:flex-row lg:flex-row justify-center mx-30 rounded-lg">
         <div className="container mx-auto flex justify-center items-center px-24 flex-row mt-10 py-6 gap-6">
-          <img src="/logo.png" alt="Logo" className="h-20 w-20 mb-4" />
+          <div className="relative">
+            <Image src="/logo.png" alt="Logo" width={100} height={100} />
+          </div>
           <div>
             <h1 className="text-3xl font-bold">Contact us</h1>
             <ul>

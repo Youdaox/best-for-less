@@ -5,7 +5,9 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <Services />
+      <div className="container mx-auto flex justify-center px-12 flex-col flex-1">
+        <Services />
+      </div>
     </div>
   );
 }
