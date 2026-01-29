@@ -8,7 +8,6 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import Link from "next/link";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const components: { title: string; href: string; description: string }[] = [
