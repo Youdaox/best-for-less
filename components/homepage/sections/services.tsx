@@ -20,6 +20,7 @@ const components = [
   { title: "Item Removal", description: "Efficient and responsible removal of unwanted items from your premises.", icon: "Trash2" },
   { title: "Special Items", description: "We handle special items with extra care to ensure their safe transport.", icon: "Piano" },
 ]
+
 const icons: { [key: string]: React.JSX.Element } = {
   House: <House size={56} />,
   Van: <Van size={56} />,
