@@ -25,9 +25,9 @@ const HeroTextBlock = () => {
 
 const Hero = () => {
   return (
-    <div className="mb-32">
-      <div className="relative w-full h-260 rounded-md shadow-md">
-        <div className="absolute inset-0 -z-10">
+    <div className="mb-16">
+      <div className="relative w-full h-260 rounded-b-2xl shadow-md ">
+        <div className="absolute inset-0 -z-10 rounded-b-2xl overflow-hidden">
           <Image
             src="/hero.png"
             fill
@@ -36,7 +36,7 @@ const Hero = () => {
             priority
           />
         </div>
-        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-black/45 rounded-b-2xl" />
         <div className="absolute inset-0 flex items-center flex-col lg:flex-row justify-center gap-16">
           <HeroTextBlock />
           <QuoteForm />

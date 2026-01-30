@@ -61,7 +61,7 @@ const QuoteForm = () => {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center w-full max-w-xl px-6 sm:px-8 lg:px-10 mt-24 py-10 rounded-2xl bg-gray-100/90">
+    <div className="flex flex-col justify-center items-center z-10 w-full max-w-xl px-6 sm:px-8 lg:px-10 mt-24 py-10 rounded-2xl bg-gray-100/90">
       <h1 className="text-slate-700 text-4xl font-bold px-4 mb-12">Request a free quote</h1>
       <form className="bg-white p-6 rounded-lg shadow-2xl w-full" onSubmit={handleSubmit}>
         <FieldGroup className="gap-5">
