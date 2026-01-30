@@ -61,9 +61,9 @@ const QuoteForm = () => {
   }
 
   return (
-    <div className="flex flex-col justify-center text-center m-16 mr-0 ml-24 shadow-lg py-12 px-8 rounded-2xl bg-gray-100/90 ">
-      <h1 className="text-black text-4xl font-extrabold px-4 mb-12">Request A Free Quote</h1>
-      <form className="bg-white p-6 rounded-lg shadow-2xl w-lg" onSubmit={handleSubmit}>
+    <div className="flex flex-col justify-center items-center w-full max-w-xl px-6 sm:px-8 lg:px-10 mt-24 py-10 rounded-2xl bg-gray-100/90">
+      <h1 className="text-slate-700 text-4xl font-bold px-4 mb-12">Request a free quote</h1>
+      <form className="bg-white p-6 rounded-lg shadow-2xl w-full" onSubmit={handleSubmit}>
         <FieldGroup className="gap-5">
           <AddressAutofill accessToken={process.env.NEXT_PUBLIC_MAPBOX_API_KEY || ""}>
             <InputGroup>
@@ -96,7 +96,7 @@ const QuoteForm = () => {
           <Separator className="my-3 mx-auto max-w-18 p-0.5 rounded-2xl bg-black/20"/>
         </FieldGroup>
 
-        <FieldGroup className="grid gap-4 grid-cols-2 my-4">
+        <FieldGroup className="grid gap-4 grid-cols-1 sm:grid-cols-2 my-4">
           <Input id="name" placeholder="Name" value={name} onChange={({target}) => setName(target.value)} />
           <Input type="email" placeholder="Your Email" required value={email} onChange={({target}) => setEmail(target.value)} />
           <Input type="date" id="moving-date" value={date?.toISOString().split('T')[0]} onChange={({target}) => setDate(new Date(target.value))} />
@@ -105,7 +105,9 @@ const QuoteForm = () => {
             <SelectTrigger className="w-full h-12! text-lg!">
               <SelectValue placeholder="Type of Move"/>
             </SelectTrigger>
-            <SelectContent position="item-aligned">
+            <SelectContent
+              position="popper"
+            >
               {components.map(c => (
                 <SelectItem key={c.title} value={c.title}>{c.title}</SelectItem>
                 )
@@ -115,14 +117,15 @@ const QuoteForm = () => {
         </FieldGroup>
 
         <Textarea placeholder="Message" value={message} onChange={({target}) => setMessage(target.value)} />
-
-        <Button 
-          className="text-md mt-6 bg-slate-950 hover:bg-slate-800 text-white font-bold py-6 px-4 "
-          type="submit"
-        >
-          <Send className="icon size-lg" /> 
-          Get a Free Quote
-        </Button>
+        <div className="flex justify-center">
+          <Button 
+            className="text-md mt-6  bg-slate-950 hover:bg-slate-800 text-white font-bold py-6 px-4 "
+            type="submit"
+          >
+            <Send className="icon size-lg" /> 
+            Get a Free Quote
+          </Button>
+        </div>
       </form>
     </div>
   );

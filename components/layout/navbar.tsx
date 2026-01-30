@@ -80,7 +80,7 @@ const Navbar = () => {
           <h1 className="text-4xl font-extrabold">BEST FOR LESS</h1>
         </div>
         <div className="flex items-center gap-20">
-          <NavigationMenu className="py-4 px-4 w-full">
+          <NavigationMenu className="py-4 px-4">
               <NavigationMenuList className="flex gap-10 text-lg">
                 
                   <NavigationMenuItem>
@@ -92,7 +92,7 @@ const Navbar = () => {
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+                    <NavigationMenuTrigger className="bg-zinc-50">Services</NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className="mt-2.5 grid w-100 gap-3 md:w-125 md:grid-cols-2 lg:w-150">
                         {components.map(c => (
