@@ -27,7 +27,7 @@ const Process = () => {
         <h1 className="text-5xl font-extrabold text-white my-6"> How it works</h1>
         <p className="text-2xl text-white">No hidden fees, our quote is all inclusive and straightforward.</p>
       </div>
-      <div className="flex flex-col justify-center items-center gap-10 my-10">
+      <div className="flex justify-center items-center gap-10 my-10">
         <ProcessStep
           number={1}
           title="Get a Quote"
