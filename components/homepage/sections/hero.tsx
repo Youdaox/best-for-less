@@ -12,7 +12,7 @@ const HeroTextBlock = () => {
 
       <div className="max-w-2xl">
         <h2 className="text-white text-2xl md:text-2xl font-semibold mt-4 px-4 italic">
-          &quot;For a <span className="bg-yellow-300/10 px-2 py-1 rounded-lg"> Stress-free</span> move, choose Best for Less Mover!&quot;
+          &quot;For a <span className="bg-slate-800/40 px-2 py-1 rounded-lg"> Stress-free</span> move, choose Best for Less Mover!&quot;
         </h2>
 
         <p className="text-white text-md font-semibold mt-4 px-4 leading-tight">
@@ -26,7 +26,7 @@ const HeroTextBlock = () => {
 const Hero = () => {
   return (
     <div className="mb-16">
-      <div className="relative w-full h-260 rounded-b-2xl shadow-md ">
+      <div className="relative w-full h-240 rounded-b-2xl shadow-md ">
         <div className="absolute inset-0 -z-10 rounded-b-2xl overflow-hidden">
           <Image
             src="/hero.png"
@@ -36,7 +36,7 @@ const Hero = () => {
             priority
           />
         </div>
-        <div className="absolute inset-0 bg-black/45 rounded-b-2xl" />
+        <div className="absolute inset-0 bg-slate-950/50 rounded-b-2xl" />
         <div className="absolute inset-0 flex items-center flex-col lg:flex-row justify-center gap-16">
           <HeroTextBlock />
           <QuoteForm />
