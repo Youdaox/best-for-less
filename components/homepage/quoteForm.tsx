@@ -1,10 +1,12 @@
 "use client"
 import { useState } from "react";
-import { SearchIcon, Send } from "lucide-react";
-import { Button } from "../ui/button";
-import { Field, FieldGroup, FieldLabel } from "../ui/field";
 
+import { SearchIcon, Send } from "lucide-react";
+
+import { Button } from "../ui/button";
+import { FieldGroup } from "../ui/field";
 import { Input } from "@/components/ui/input"
+import { Textarea } from "../ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select";
 import {
   InputGroup,
@@ -15,17 +17,10 @@ import { Separator } from "@/components/ui/separator"
 
 
 import { AddressAutofill } from '@mapbox/search-js-react';
+import { QuoteRequest, Service } from "@/app/types";
+import services from "@/data/services.json";
 
-import { QuoteRequest } from "@/app/types";
-import { Textarea } from "../ui/textarea";
-
-const components = [
-  { title: "Office Movers", description: "We provide top-notch office moving services to ensure a smooth transition for your business." },
-  { title: "Furniture Movers", description: "Our expert team handles your furniture with care, ensuring safe and efficient moves." },
-  { title: "Trademe Pickup", description: "Convenient pickup services for your Trademe purchases, delivered right to your doorstep." },
-  { title: "House Movers", description: "Reliable house moving services that make relocating stress-free and easy." },
-  { title: "Item Removal", description: "Efficient and responsible removal of unwanted items from your premises." },
-]
+const components: Service[] = services
 
 
 const QuoteForm = () => {

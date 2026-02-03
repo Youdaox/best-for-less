@@ -1,9 +1,13 @@
 import { Separator } from "@radix-ui/react-separator";
 import {
   RiWechatFill as WechatFillIcon,
-
 } from "@remixicon/react";
+import { Mail, MapPin, Phone } from "lucide-react";
+import data from "@/data/services.json";
+import { Service } from "@/app/types";
 
+import Link from "next/link";
+const services: Service[] = data;
 
 const Footer = () => {
   return (
@@ -19,22 +23,26 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-row justify-between items-start gap-50">
-          <div className="container flex justify-center flex-row">
-            <div>
-              <h1 className="text-3xl font-bold">Contact us</h1>
-              <ul>
-                <li>Email: email@example.com</li>
-                <li>Phone: +1 234 567 890</li>
-                <li>Address: 123 Main St</li> 
-              </ul>
-            </div>
+          <div className="flex flex-col items-center">
+            <Link href="/services">
+              <h1 className="text-3xl font-bold mb-8">Services</h1>
+            </Link>
+            <ul className="grid grid-cols-1 md:grid-cols-2 text-lg font-semibold space-y-4 gap-x-12">
+              {services.map(service => (
+                <Link key={service.title} href={service.href}>
+                <li key={service.title}>{service.title}</li>
+                </Link>
+              ))}
+            </ul>
           </div>
-          <div className="container flex justify-center flex-col">
-            <h1 className="text-3xl font-bold">Services</h1>
-            <ul>
-              <li>Moving services</li>
-              <li>Packing services</li>
-              <li>Storage services</li> 
+          <div className="flex flex-col items-center">
+            <Link href="/contact">
+            <h1 className="text-3xl font-bold mb-8">Contact</h1>
+            </Link>
+            <ul className="text-md space-y-4">
+              <li className="flex items-center gap-2"> <Mail size={32}/>email@example.com</li>
+              <li className="flex items-center gap-2"> <Phone size={32}/>234 567 890</li>
+              <li className="flex items-center gap-2"> <MapPin size={32}/>123 Main St</li> 
             </ul>
           </div>
         </div>

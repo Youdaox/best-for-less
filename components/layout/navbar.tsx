@@ -9,35 +9,11 @@ import {
 } from "@/components/ui/navigation-menu"
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import services from "@/data/services.json";
+import { Service } from "@/app/types";
 
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "Office Movers",
-    href: "/services",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
-    title: "Furniture Movers",
-    href: "/services",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Trademe Pickup",
-    href: "/services",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-  },
-  {
-    title: "House Movers",
-    href: "/services",
-    description: "Visually or semantically separates content.",
-  },
-  { title: "Item Removal",
-    href: "/services",
-    description: "Efficient and responsible removal of unwanted items from your premises." },
-]
+const components: Service[] = services;
+
 const ListItem = ({
   title,
   children,

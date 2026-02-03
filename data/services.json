@@ -1,0 +1,38 @@
+[
+  { 
+    "title": "Office Movers",
+    "description": "We provide top-notch office moving services to ensure a smooth transition for your business.",
+    "href": "/services/office-movers",
+    "icon": "Briefcase"
+  },
+  { 
+    "title": "Furniture Movers",
+    "description": "Our expert team handles your furniture with care, ensuring safe and efficient moves.",
+    "href": "/services/furniture-movers",
+    "icon": "Armchair"
+  },
+  { 
+    "title": "Trademe Pickup",
+    "description": "Convenient pickup services for your Trademe purchases, delivered right to your doorstep.",
+    "href": "/services/trademe-pickup",
+    "icon": "Van"
+  },
+  { 
+    "title": "House Movers",
+    "description": "Reliable house moving services that make relocating stress-free and easy.",
+    "href": "/services/house-movers",
+    "icon": "House"
+  },
+  { 
+    "title": "Item Removal",
+    "description": "Efficient and responsible removal of unwanted items from your premises.",
+    "href": "/services/item-removal",
+    "icon": "Trash2"
+  },
+  { 
+    "title": "Special Items",
+    "description": "We handle special items with extra care to ensure their safe transport.",
+    "href": "/services/special-items",
+    "icon": "Piano"
+  }
+]

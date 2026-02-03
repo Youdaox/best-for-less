@@ -11,15 +11,10 @@ import {
 import { Button } from "../../ui/button";
 import { House, Van, Trash2, Armchair, Briefcase, Piano } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { Service } from "@/app/types";
+import services from "@/data/services.json";
 
-const components = [
-  { title: "Office Movers", description: "We provide top-notch office moving services to ensure a smooth transition for your business.", icon: "Briefcase"},
-  { title: "Furniture Movers", description: "Our expert team handles your furniture with care, ensuring safe and efficient moves.", icon: "Armchair" },
-  { title: "Trademe Pickup", description: "Convenient pickup services for your Trademe purchases, delivered right to your doorstep.", icon: "Van" },
-  { title: "House Movers", description: "Reliable house moving services that make relocating stress-free and easy.", icon: "House" },
-  { title: "Item Removal", description: "Efficient and responsible removal of unwanted items from your premises.", icon: "Trash2" },
-  { title: "Special Items", description: "We handle special items with extra care to ensure their safe transport.", icon: "Piano" },
-]
+const components: Service[] = services
 
 const icons: { [key: string]: React.JSX.Element } = {
   House: <House size={56} />,

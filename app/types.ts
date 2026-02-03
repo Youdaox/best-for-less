@@ -16,3 +16,10 @@ export type QuoteRequest = {
   email: string;
   message?: string;
 }
+
+export type Service = {
+  title: string;
+  href: string;
+  description: string;
+  icon?: string;
+}
