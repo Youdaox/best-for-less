@@ -51,7 +51,7 @@ const Navbar = () => {
   }, [])
 
   return (
-    <div className={`flex shadow-md rounded-b-lg items-center justify-around bg-zinc-50 fixed left-0 right-0 z-50 transition-all duration-300 ease-in-out ${scrolled ? "-translate-y-full" : "top-0"}`}>
+    <div className={`hidden md:flex shadow-md rounded-b-lg items-center justify-around bg-zinc-50 fixed left-0 right-0 z-50 transition-all duration-300 ease-in-out ${scrolled ? "-translate-y-full" : "top-0"}`}>
         <div className="relative">
           <h1 className="text-4xl font-extrabold">BEST FOR LESS</h1>
         </div>

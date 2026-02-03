@@ -12,22 +12,22 @@ const services: Service[] = data;
 const Footer = () => {
   return (
     <footer className="max-w-full bg-slate-800">
-      <div className="flex flex-row justify-around items-start p-12 rounded-lg text-white">
-        <div className="max-w-sm gap-2 flex flex-col">
+      <div className="flex flex-col space-y-12 md:p-4 sm:p-12 lg:flex-row items-center lg:items-start justify-around rounded-lg text-white">
+        <div className="max-w-sm gap-2 flex flex-col items-center lg:items-start">
           <h1 className="text-4xl font-extrabold">BEST FOR LESS</h1>
-          <p className="my-4">Best for Less mover is a Man with a Van business with over 20 years of professionalism. We are equipped with a team of experienced workers and a 20 cubic metre truck ready to handle your move.</p>
+          <p className="my-4 text-center lg:text-start">Best for Less mover is a Man with a Van business with over 20 years of professionalism. We are equipped with a team of experienced workers and a 20 cubic metre truck ready to handle your move.</p>
           <div className="flex flex-row gap-4">
             <WechatFillIcon size={30} />
             <WechatFillIcon size={30} />
             <WechatFillIcon size={30} />
           </div>
         </div>
-        <div className="flex flex-row justify-between items-start gap-50">
-          <div className="flex flex-col items-center">
+        <div className="flex flex-col md:flex-row space-y-12 items-center md:items-start   justify-between md:gap-12 2xl:gap-50">
+          <div className="flex flex-col items-center" >
             <Link href="/services">
               <h1 className="text-3xl font-bold mb-8">Services</h1>
             </Link>
-            <ul className="grid grid-cols-1 md:grid-cols-2 text-lg font-semibold space-y-4 gap-x-12">
+            <ul className="grid grid-cols-2 text-lg font-semibold space-y-4 gap-x-12">
               {services.map(service => (
                 <Link key={service.title} href={service.href}>
                 <li key={service.title}>{service.title}</li>

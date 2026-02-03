@@ -12,7 +12,6 @@ export default function Home() {
       <div className="container mx-auto flex justify-center px-12 flex-col flex-1">
         <About />
       </div>
-      <Process />
       <div className="container mx-auto flex justify-center px-12 flex-col flex-1">
         <Services />
       </div>
