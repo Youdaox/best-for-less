@@ -3,9 +3,9 @@ import QuoteForm from "../quoteForm";
 
 const HeroTextBlock = () => {
   return (
-    <div>
+    <div className="mt-200 lg:mt-0">
       <div className="max-w-2xl">
-        <h1 className="text-white text-5xl md:text-7xl font-extrabold px-4 max-w-md">
+        <h1 className="text-white text-6xl md:text-7xl font-extrabold px-4 max-w-md">
           Quality Service At The Best Price
         </h1>
       </div>
@@ -25,7 +25,7 @@ const HeroTextBlock = () => {
 
 const Hero = () => {
   return (
-    <div className="mb-16">
+    <div className="mb-160 lg:mb-16">
       <div className="relative w-full h-240 rounded-b-2xl shadow-md ">
         <div className="absolute inset-0 -z-10 rounded-b-2xl overflow-hidden">
           <Image

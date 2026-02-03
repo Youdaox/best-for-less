@@ -2,10 +2,10 @@ import { Separator } from "@radix-ui/react-separator";
 
 const About = () => {
   return (
-    <div className="rounded-lg grid grid-cols-2 sm:grid-cols-2 p-10 my-10 gap-7">
+    <div className="rounded-lg grid grid-cols-1 lg:grid-cols-2 pt-10 lg:px-10 my-10 gap-7">
       <div>
         <Separator className="my-3 max-w-70 p-0.5 rounded-2xl bg-black/20"/>
-        <h1 className="text-5xl font-extrabold text-slate-800 my-6">Best for Less mover is a Man with a Van business with over 20 years of professionalism.</h1>
+        <h1 className="text-3xl lg:text-5xl font-extrabold text-slate-800 my-6">Best for Less mover is a Man with a Van business with over 20 years of professionalism.</h1>
       </div>
       <div className="flex flex-col gap-6">
         <p className="text-lg leading-tight">
