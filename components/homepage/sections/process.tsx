@@ -1,18 +1,19 @@
 import { Separator } from "@radix-ui/react-separator";
-import LooksOneIcon from '@mui/icons-material/LooksOne';
-import LooksTwoIcon from '@mui/icons-material/LooksTwo';
-import LooksThreeIcon from '@mui/icons-material/Looks3';
-
-const icons: { [key: string]: React.JSX.Element } = {
-  1: <LooksOneIcon style={{ fontSize: 80 }} className="text-slate-800"/>,
-  2: <LooksTwoIcon style={{ fontSize: 80 }} className="text-slate-800"/>,
-  3: <LooksThreeIcon style={{ fontSize: 80 }} className="text-slate-800"/>,
-}
+import {
+  RiNumber1 as Number1Icon,
+  RiNumber2 as Number2Icon,
+  RiNumber3 as Number3Icon,
+} from "@remixicon/react";
+const icons = [
+  <Number1Icon key={1} size={32} className="text-slate-800" />,
+  <Number2Icon key={2} size={32} className="text-slate-800" />,
+  <Number3Icon key={3} size={32} className="text-slate-800" />,
+];
 
 const ProcessStep = ({ number, title, description }: { number: number; title: string; description: string }) => {
   return (
     <div className="flex flex-col items-center max-w-sm">
-      {icons[number]}
+      {icons[number - 1]}
       <h2 className="text-3xl font-bold my-4">{title}</h2>
       <p className="text-center text-lg">{description}</p>
     </div>
