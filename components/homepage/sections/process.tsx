@@ -1,4 +1,4 @@
-import { Separator } from "@radix-ui/react-separator";
+import { Separator } from "@/components/ui/separator";
 import {
   RiNumber1 as Number1Icon,
   RiNumber2 as Number2Icon,

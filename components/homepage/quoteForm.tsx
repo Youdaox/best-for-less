@@ -1,5 +1,6 @@
 "use client"
 import { useState } from "react";
+import dynamic from "next/dynamic";
 
 import { SearchIcon, Send } from "lucide-react";
 
@@ -16,7 +17,10 @@ import {
 import { Separator } from "@/components/ui/separator"
 
 
-import { AddressAutofill } from '@mapbox/search-js-react';
+const AddressAutofill = dynamic(
+  () => import("@mapbox/search-js-react").then((mod) => mod.AddressAutofill),
+  { ssr: false }
+);
 import { QuoteRequest, Service } from "@/app/types";
 import services from "@/data/services.json";
 
