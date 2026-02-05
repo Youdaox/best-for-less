@@ -13,6 +13,7 @@ const About = () => {
           alt="Hero Image"
           priority
         />
+        <div className="absolute inset-0 bg-linear-to-t from-slate-950/90 to-transparent" />
       </div>
       <div className="flex flex-col gap-6">
         <div>
@@ -23,10 +24,10 @@ const About = () => {
           We are equipped with a team of experienced workers and a 20 cubic metre truck ready to handle your move. We give our customers the most competitive prices in the market for the smoothest experience. Whether you are moving locally or long-distance, we have the expertise and resources to make your move a success. Our commitment to customer satisfaction means that we go above and beyond to ensure that your belongings are handled with care and delivered on time. Choose Best for Less Mover for a stress-free and affordable moving experience.
         </p>
         <div className="text-white gap-5 flex">
-          <Button variant="outline" size='lg' className='py-6 bg-red-500/95 transition-all hover:bg-red-900/90 cursor-pointer'>
+          <Button variant="outline" size='lg' className='py-6 bg-red-500/95 hover:bg-red-900/90 cursor-pointer'>
             Get a Quote
           </Button>
-          <Button variant="outline" size='lg' className='py-6 text-slate-800 transition-all hover:bg-slate-800/70 cursor-pointer'>
+          <Button variant="outline" size='lg' className='py-6 text-slate-800 hover:bg-slate-800/70 cursor-pointer'>
             Learn More
           </Button>
         </div>

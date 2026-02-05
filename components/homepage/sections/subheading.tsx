@@ -1,4 +1,3 @@
-import { Separator } from "@/components/ui/separator";
 
 const Card = ({ text, title }: { text: string; title: string }) => {
   return (
