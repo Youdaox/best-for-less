@@ -12,6 +12,7 @@ export default function Home() {
         <About />
       </div>
       <Process />
+      <Subheading />
       <div className="container mx-auto flex justify-center px-12 flex-col flex-1">
         <Services />
       </div>
