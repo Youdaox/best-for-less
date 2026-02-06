@@ -14,7 +14,8 @@ import { Service } from "@/app/types";
 import { Button } from "../ui/button";
 import { Separator } from "@/components/ui/separator";
 
-import { Phone } from "lucide-react";
+import { Phone, Menu} from "lucide-react";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 
 const components: Service[] = services;
 
@@ -38,6 +39,36 @@ const ListItem = ({
   )
 }
 
+const MobileMenu = () => {
+  return (
+    <Sheet>
+      <SheetTrigger asChild>
+        <Menu size={32}/>
+      </SheetTrigger>
+      <SheetContent side="left">
+        <SheetHeader>
+          <SheetTitle>Menu</SheetTitle>
+        </SheetHeader>
+        <nav className="flex flex-col gap-4 p-4">
+          <Link href="/">
+            Home
+          </Link>
+          <Link href="/services">
+            Services
+          </Link>
+          <Link href="/pricing">
+            Pricing
+          </Link>
+          <Link href="/about">
+            About
+          </Link>
+        </nav>
+      </SheetContent>
+    </Sheet>
+  )
+}
+
+
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
   
@@ -55,11 +86,16 @@ const Navbar = () => {
   }, [])
 
   return (
-    <div className={`hidden p-2 md:flex shadow-md rounded-b-lg items-center justify-around bg-zinc-50 fixed left-0 right-0 z-50 transition-all duration-300 ease-in-out ${scrolled ? "-translate-y-full" : "top-0"}`}>
-        <div className="relative">
-          <h1 className="text-4xl font-extrabold">BEST FOR LESS</h1>
+    <div className={`p-2 py-4 md:py-2 flex shadow-md items-center justify-around bg-slate-800 text-zinc-50 fixed left-0 right-0 z-50 transition-all duration-300 ease-in-out ${scrolled ? "-translate-y-full" : "top-0"}`}>
+        <div className="flex md:hidden items-center">
+          <MobileMenu />
         </div>
-        <div className="flex items-center">
+        
+        <div className="relative">
+          <h1 className="text-4xl text-zinc-100 font-extrabold whitespace-nowrap">BEST FOR LESS</h1>
+        </div>
+
+        <div className="hidden md:flex items-center">
           <NavigationMenu className="py-4 px-4 mr-5">
               <NavigationMenuList className="flex gap-4 text-lg font-semibold">
                 
@@ -72,7 +108,7 @@ const Navbar = () => {
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="bg-zinc-50">Services</NavigationMenuTrigger>
+                    <NavigationMenuTrigger className="bg-transparent">Services</NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className="mt-2.5 grid w-100 gap-3 md:w-125 md:grid-cols-2 lg:w-150">
                         {components.map(c => (
@@ -90,26 +126,26 @@ const Navbar = () => {
                   
                   <NavigationMenuItem>
                     <NavigationMenuLink asChild>
-                      <Link href="/about">About</Link>
+                      <Link href="/pricing">Pricing</Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
                     <NavigationMenuLink asChild>
-                      <Link href="/contact">Contact</Link>
+                      <Link href="/about">About</Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
 
               </NavigationMenuList>
           </NavigationMenu>
           <div className="flex items-center gap-12">
-            <Separator orientation="vertical" className="bg-slate-800/50 p-px h-10!" />
-            <div className="flex flex-row items-center gap-12">
-              <div>
-                <Phone size={24} className="inline mr-3" />
-                <span className="text-xl font-bold">021 123 4567</span>
+            <Separator orientation="vertical" className="bg-black/30 hidden lg:flex p-px h-10!" />
+            <div className="hidden lg:flex flex-row gap-10">
+              <div className="flex items-center">
+                <Phone size={24} color="oklch(79.5% 0.184 86.047)" className="inline mr-3" />
+                <span className="text-xl font-bold whitespace-nowrap">021 123 4567</span>
               </div>
-              <Button variant="outline" size='lg' className='py-7 px-10 text-white text-md bg-pink-900/85 hover:bg-pink-900 cursor-pointer'>
+              <Button size='lg' className='py-7 px-10 text-white text-md bg-pink-900/85 hover:bg-pink-900 cursor-pointer'>
                 Get a Quote
               </Button>
             </div>
