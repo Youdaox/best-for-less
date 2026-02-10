@@ -1,3 +1,4 @@
+import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import {
   RiNumber1 as Number1Icon,
@@ -12,7 +13,7 @@ const icons = [
 
 const ProcessStep = ({ number, title, description }: { number: number; title: string; description: string }) => {
   return (
-    <div className="flex flex-col items-center max-w-sm">
+    <div className="flex flex-col">
       <div className="p-5 bg-slate-800 rounded-lg">
         {icons[number - 1]}
       </div>
@@ -25,12 +26,12 @@ const ProcessStep = ({ number, title, description }: { number: number; title: st
 const Process = () => {
   return (
     <div>
-      <div className="bg-slate-800 flex flex-col items-center w-full p-10 my-10">
+      <div className="flex flex-col items-center w-full p-10 my-10">
+        <Badge variant="outline" className="text-sm font-medium bg-slate-800/90 text-slate-100">How It Works</Badge>
+        <p className="text-2xl">No hidden fees, our quote is all inclusive and straightforward.</p>
         <Separator className="mt-3 w-40! p-0.5 rounded-2xl bg-white/40"/>
-        <h1 className="text-5xl font-extrabold text-white my-6"> How it works</h1>
-        <p className="text-2xl text-white">No hidden fees, our quote is all inclusive and straightforward.</p>
       </div>
-      <div className="flex flex-col lg:flex-row justify-center items-center gap-10 my-10">
+      <div className="flex flex-col justify-center items-center gap-10 my-10">
         <ProcessStep
           number={1}
           title="Get a Quote"

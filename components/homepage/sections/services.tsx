@@ -13,6 +13,7 @@ import { House, Van, Trash2, Armchair, Briefcase, Piano } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Service } from "@/app/types";
 import services from "@/data/services.json";
+import { Badge } from "@/components/ui/badge";
 
 const components: Service[] = services
 
@@ -53,9 +54,10 @@ const ServicesCard = ({ title, description, icon }: ServicesCardProps) => {
 const Services = () => {
   return (
     <div>
-      <Separator className="my-3 max-w-70 p-0.5 rounded-2xl bg-black/20"/>
+      <Badge variant="outline" className="text-sm font-medium bg-slate-800/90 text-slate-100">Our Services</Badge>
       <h1 className="text-5xl lg:text-6xl font-extrabold text-slate-800 my-6"> Our Services</h1>
       <p className="text-3xl">We offer a range of services to meet your moving needs.</p>
+      <Separator className="my-3 max-w-70 p-0.5 rounded-2xl bg-black/20"/>
       <div className="rounded-lg lg:p-10 my-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {components.map(c => (
