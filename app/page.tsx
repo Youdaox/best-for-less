@@ -12,8 +12,8 @@ export default function Home() {
       <Hero />
       <div className="container mx-auto flex justify-center px-12 flex-col flex-1">
         <About />
+        <Process />
       </div>
-      <Process />
       <Subheading />
       <div className="container mx-auto flex justify-center px-12 flex-col flex-1">
         <Services />
