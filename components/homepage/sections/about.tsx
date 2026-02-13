@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="rounded-lg grid grid-cols-1 lg:grid-cols-2 py-10 lg:px-10 my-16 gap-12">
+    <div className="rounded-lg grid grid-cols-1 lg:grid-cols-2 py-10 px-2 lg:px-10 gap-12 sm:my-16">
       <div className="relative w-full h-80 lg:h-140 rounded-lg shadow-md overflow-hidden">
         <Image
           src="/hero.png"
@@ -22,7 +22,7 @@ const About = () => {
           <h1 className="text-3xl lg:text-5xl font-extrabold text-slate-800 my-6">Best for Less mover is a Man with a Van business with over 20 years of professionalism.</h1>
           <Separator className="my-3 max-w-70 p-0.5 rounded-2xl bg-black/20"/>
         </div>
-        <p className="text-lg leading-tight">
+        <p className="text-md sm:text-lg leading-tight">
           We are equipped with a team of experienced workers and a 20 cubic metre truck ready to handle your move. We give our customers the most competitive prices in the market for the smoothest experience. Whether you are moving locally or long-distance, we have the expertise and resources to make your move a success. Our commitment to customer satisfaction means that we go above and beyond to ensure that your belongings are handled with care and delivered on time. Choose Best for Less Mover for a stress-free and affordable moving experience.
         </p>
         <div className="text-white gap-5 flex">

@@ -10,12 +10,12 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <div className="container mx-auto flex justify-center px-12 flex-col flex-1">
+      <div className="container mx-auto flex justify-center sm:px-12 flex-col flex-1">
         <About />
         <Process />
       </div>
       <Subheading />
-      <div className="container mx-auto flex justify-center px-12 flex-col flex-1">
+      <div className="container mx-auto flex justify-center sm:px-12 flex-col flex-1">
         <Services />
         <Testimonials />
         <Faq />
