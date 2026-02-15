@@ -1,6 +1,7 @@
 import About from "@/components/homepage/sections/about";
 import Faq from "@/components/homepage/sections/faq";
 import Hero from "@/components/homepage/sections/hero";
+import Pricing from "@/components/homepage/sections/pricing";
 import Process from "@/components/homepage/sections/process";
 import Services from "@/components/homepage/sections/services";
 import Subheading from "@/components/homepage/sections/subheading";
@@ -12,10 +13,11 @@ export default function Home() {
       <Hero />
       <div className="container mx-auto flex justify-center sm:px-12 flex-col flex-1">
         <About />
-        <Process />
       </div>
+      <Pricing />
       <Subheading />
       <div className="container mx-auto flex justify-center sm:px-12 flex-col flex-1">
+        <Process />
         <Services />
         <Testimonials />
         <Faq />
