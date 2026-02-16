@@ -10,13 +10,14 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { motion, useCycle, AnimatePresence, MotionConfig } from "motion/react"
+
 import services from "@/data/services.json";
 import { Service } from "@/app/types";
 import { Button } from "../ui/button";
 import { Separator } from "@/components/ui/separator";
 
-import { Phone, Menu} from "lucide-react";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
+import { Phone} from "lucide-react";
 
 const components: Service[] = services;
 
@@ -40,32 +41,85 @@ const ListItem = ({
   )
 }
 
-const MobileMenu = () => {
+const MobileMenu = ({ scrolled }: { scrolled: boolean }) => {
+  const [mobileNav, toggleMobileNav] = useCycle(false, true);
+
   return (
-    <Sheet>
-      <SheetTrigger asChild>
-        <Menu size={32}/>
-      </SheetTrigger>
-      <SheetContent side="left">
-        <SheetHeader>
-          <SheetTitle>Menu</SheetTitle>
-        </SheetHeader>
-        <nav className="flex flex-col gap-4 p-4">
-          <Link href="/">
-            Home
-          </Link>
-          <Link href="/services">
-            Services
-          </Link>
-          <Link href="/pricing">
-            Pricing
-          </Link>
-          <Link href="/about">
-            About
-          </Link>
-        </nav>
-      </SheetContent>
-    </Sheet>
+    <div>
+      <motion.button 
+        animate={mobileNav ? "open" : "closed"}
+        whileTap={{ scale: 0.95 }}
+        onClick={() => toggleMobileNav()}
+        className="flex flex-col space-y-2.5 relative z-10"
+      >
+        <motion.span variants={{
+          open: { rotate: -45, y: 13.9 },
+          closed: { rotate: 0, y: 0 }
+        }} className="block w-8 h-1 rounded-full bg-slate-800"></motion.span>
+        <motion.span variants={{
+          open: { opacity: 0 },
+          closed: { opacity: 1 },
+        }} className="block w-8 h-1 rounded-full bg-slate-800"></motion.span>
+        <motion.span variants={{
+          open: { rotate: 45, y: -13.9 },
+          closed: { rotate: 0, y: 0 }
+        }} className="block w-8 h-1 rounded-full bg-slate-800"></motion.span>
+      </motion.button>
+      <AnimatePresence>
+        {(mobileNav && !scrolled) &&
+          <MotionConfig
+            transition={{
+              duration: 0.3,
+              ease: "easeInOut",
+            }}
+          >
+            <motion.div variants={{
+              open: { 
+                y: "0%",
+                transition: {
+                  when: "beforeChildren",
+                  staggerChildren: 0.1,
+                  duration: 0.2,
+                  ease: "easeInOut",
+                }
+              },
+              closed: {
+                y: "-100%", 
+                transition: {
+                  when: "afterChildren",
+                  duration: 0.1,
+                  ease: "easeInOut",
+                }
+              },
+            }} 
+            initial="closed"
+            animate="open"
+            exit="closed"
+            className="fixed inset-0 bg-zinc-50 flex flex-col justify-center">
+              <motion.div variants={{
+                open: { x: "0%", opacity: 1 },
+                closed: { x: "25%", opacity: 0 },
+              }}>
+                <div className="flex flex-col items-center gap-8 text-xl font-bold text-slate-800">
+                  <Link href="/" onClick={() => toggleMobileNav()}>
+                    Home
+                  </Link>
+                  <Link href="/services" onClick={() => toggleMobileNav()}>
+                    Services
+                  </Link>
+                  <Link href="/pricing" onClick={() => toggleMobileNav()}>
+                    Pricing
+                  </Link>
+                  <Link href="/about" onClick={() => toggleMobileNav()}>
+                    About
+                  </Link>
+                </div>
+              </motion.div>
+            </motion.div>
+          </MotionConfig>
+        }
+      </AnimatePresence>
+    </div>
   )
 }
 
@@ -88,11 +142,8 @@ const Navbar = () => {
 
   return (
     <div className={`p-2 py-4 md:py-2 flex shadow-md items-center justify-around bg-zinc-50 fixed left-0 right-0 z-50 transition-all duration-300 ease-in-out ${scrolled ? "-translate-y-full" : "top-0"}`}>
-        <div className="flex md:hidden items-center">
-          <MobileMenu />
-        </div>
-        
-        <div className="relative px-8 py-2">
+
+        <div className="relative px-8 py-2 z-10">
           <Image
             src="/logo.png"
             alt="Logo"
@@ -100,6 +151,10 @@ const Navbar = () => {
             height={1}
             className="object-contain"
           />
+        </div>
+
+        <div className="flex md:hidden items-center">
+          <MobileMenu scrolled={scrolled} />
         </div>
 
         <div className="hidden md:flex items-center">
@@ -158,7 +213,6 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      
     </div>
   )
 };
