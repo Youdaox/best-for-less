@@ -44,6 +44,7 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -119,6 +120,12 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-oswald), serif;
+  }
+  p {
+    font-family: var(--font-manrope), sans-serif;
   }
 }
 

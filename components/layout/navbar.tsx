@@ -8,6 +8,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import services from "@/data/services.json";
 import { Service } from "@/app/types";
@@ -86,13 +87,19 @@ const Navbar = () => {
   }, [])
 
   return (
-    <div className={`p-2 py-4 md:py-2 flex shadow-md items-center justify-around bg-slate-800 text-zinc-50 fixed left-0 right-0 z-50 transition-all duration-300 ease-in-out ${scrolled ? "-translate-y-full" : "top-0"}`}>
+    <div className={`p-2 py-4 md:py-2 flex shadow-md items-center justify-around bg-zinc-50 fixed left-0 right-0 z-50 transition-all duration-300 ease-in-out ${scrolled ? "-translate-y-full" : "top-0"}`}>
         <div className="flex md:hidden items-center">
           <MobileMenu />
         </div>
         
-        <div className="relative">
-          <h1 className="text-4xl text-zinc-100 font-extrabold whitespace-nowrap">BEST FOR LESS</h1>
+        <div className="relative px-8 py-2">
+          <Image
+            src="/logo.png"
+            alt="Logo"
+            width={256}
+            height={1}
+            className="object-contain"
+          />
         </div>
 
         <div className="hidden md:flex items-center">

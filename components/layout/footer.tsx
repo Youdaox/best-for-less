@@ -3,6 +3,8 @@ import {
   RiWechatFill as WechatFillIcon,
 } from "@remixicon/react";
 import { Mail, MapPin, Phone } from "lucide-react";
+
+import Image from "next/image";
 import data from "@/data/services.json";
 import { Service } from "@/app/types";
 
@@ -13,8 +15,18 @@ const Footer = () => {
   return (
     <footer className="max-w-full bg-slate-800">
       <div className="flex flex-col space-y-12 md:p-4 sm:p-12 lg:flex-row items-center lg:items-start justify-around rounded-lg text-white">
-        <div className="max-w-sm gap-2 flex flex-col items-center lg:items-start">
-          <h1 className="text-4xl font-extrabold">BEST FOR LESS</h1>
+        <div className="max-w-sm gap-2 flex flex-col items-center lg:items-start mt-16 tra">
+
+          <div className="absolute rounded-md bg-slate-100 -translate-y-36 p-8">
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                width={256}
+                height={1}
+                className="object-contain"
+              />
+            </div>
+
           <p className="my-4 text-center lg:text-start">Best for Less mover is a Man with a Van business with over 20 years of professionalism. We are equipped with a team of experienced workers and a 20 cubic metre truck ready to handle your move.</p>
           <div className="flex flex-row gap-4">
             <WechatFillIcon size={30} />
