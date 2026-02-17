@@ -26,8 +26,8 @@ const HeroTextBlock = () => {
 const Hero = () => {
   return (
     <div className="mb-160 lg:mb-0">
-      <div className="relative w-full h-240 rounded-b-2xl shadow-md ">
-        <div className="absolute inset-0 -z-10 rounded-b-2xl overflow-hidden">
+      <div className="relative w-full h-240 shadow-md ">
+        <div className="absolute inset-0 -z-10">
           <Image
             src="/hero.png"
             fill
