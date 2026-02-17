@@ -14,7 +14,7 @@ const Card = ({ text, title }: { text: string; title: string }) => {
 
 const Subheading = () => {
   return (
-    <div className="max-w-full mx-auto my-10 py-14 grid grid-cols-2 justify-between lg:grid-cols-4 bg-slate-100/30 rounded-lg">
+    <div className="max-w-full mx-auto my-8 py-12 grid grid-cols-2 justify-between lg:grid-cols-4 bg-zinc-300/30">
       <div className="flex justify-center border-r-2 border-slate-300">
         <Card title="20+" text="years of experience" />
       </div>

@@ -6,7 +6,7 @@ import Image from "next/image";
 const About = () => {
   return (
     <div className="rounded-lg grid grid-cols-1 lg:grid-cols-2 py-10 px-2 lg:px-10 gap-12 sm:my-16">
-      <div className="relative w-full h-80 lg:h-140 rounded-lg shadow-md overflow-hidden">
+      <div className="relative w-full h-80 lg:h-140 rounded-sm shadow-md overflow-hidden">
         <Image
           src="/hero.png"
           fill
@@ -16,7 +16,7 @@ const About = () => {
         />
         <div className="absolute inset-0 bg-linear-to-t from-slate-950/90 to-transparent" />
       </div>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col px-4 gap-6">
         <div>
           <Badge variant="outline" className="text-sm font-medium bg-slate-800/90 text-slate-100">About Us</Badge>
           <h1 className="text-3xl lg:text-5xl font-extrabold text-slate-800 my-6">Best for Less mover is a Man with a Van business with over 20 years of professionalism.</h1>

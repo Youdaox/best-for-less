@@ -17,8 +17,8 @@ export default function Home() {
       <Pricing />
       <Subheading />
       <div className="container mx-auto flex justify-center sm:px-12 flex-col flex-1">
-        <Process />
         <Services />
+        <Process />
         <Testimonials />
         <Faq />
       </div>

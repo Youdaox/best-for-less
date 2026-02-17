@@ -22,7 +22,7 @@ const TestimonialCard= ({ text, author }: { text: string; author: string }) => {
 
 const Testimonials = () => {
   return (
-    <section className="my-50">
+    <section className="py-8 my-8">
       <div className="mx-auto max-w-3xl text-center mb-12 space-y-4">
         <h2 className="text-5xl font-bold">What People are Saying about Best for Less Mover</h2>
         <p>Our customers are our top priority, and we're dedicated to providing the best possible service at the most competitive prices. Here's what a few of our satisfied customers have to say about us.</p>

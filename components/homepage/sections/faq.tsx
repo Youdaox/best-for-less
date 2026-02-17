@@ -38,7 +38,7 @@ const FaqDropdown = () => {
 
 const Faq = () => {
   return (
-    <section className="py-20 px-4 rounded-lg bg-slate-100">
+    <section className="py-20 px-4 rounded-lg bg-zinc-100 my-32">
       <h2 className="text-5xl font-extrabold mb-8 text-slate-800 text-center">Frequently Asked Questions</h2>
       <div className="flex justify-center">
         <FaqDropdown />

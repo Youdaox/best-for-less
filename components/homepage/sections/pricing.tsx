@@ -32,9 +32,9 @@ const PricingCard = ({ title, price, mostPopular }: { title: string, price: stri
 
 const Pricing = () => {
   return (
-    <div className="">
-      <div className="flex flex-col items-center w-full p-10">
-        <h1 className="text-3xl lg:text-5xl font-bold text-slate-800 my-6">AFFORDABLE MOVING RATES</h1>
+    <div className="p-8">
+      <div className="flex flex-col items-center w-full mb-16">
+        <h1 className="text-3xl lg:text-5xl font-bold text-slate-800">AFFORDABLE MOVING RATES</h1>
       </div>
       <div className="flex flex-col lg:flex-row justify-center items-center gap-10">
         <PricingCard title="1 man and a truck" price="199" />

@@ -50,10 +50,10 @@ const MobileProcess = () => {
 const Process = () => {
   return (
     <div>
-      <div className="flex flex-col items-center w-full p-10">
+      <div className="flex flex-col items-center w-full p-8">
         <Badge variant="outline" className="text-sm font-medium bg-slate-800/90 text-slate-100">How It Works</Badge>
-        <h1 className="text-3xl lg:text-5xl font-extrabold text-slate-800 my-6">Our Simple Process</h1>
-        <p className="text-2xl">No hidden fees, our quote is all inclusive and straightforward.</p>
+        <h1 className="text-3xl lg:text-5xl font-extrabold text-slate-800 mb-4 my-2">Our Simple Process</h1>
+        <p className="text-xl">No hidden fees, our quote is all inclusive and straightforward.</p>
         <Separator className="mt-3 w-40! p-0.5 rounded-2xl bg-white/40"/>
       </div>
       <div className="hidden sm:flex flex-col max-w-4xl mx-auto">
