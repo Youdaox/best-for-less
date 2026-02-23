@@ -29,7 +29,7 @@ const Hero = () => {
       <div className="relative w-full h-240 shadow-md ">
         <div className="absolute inset-0 -z-10">
           <Image
-            src="/hero.png"
+            src="/hero1.avif"
             fill
             className="object-cover"
             alt="Hero Image"

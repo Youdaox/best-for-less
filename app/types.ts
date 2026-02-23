@@ -23,3 +23,9 @@ export type Service = {
   description: string;
   icon?: string;
 }
+
+export type Testimonial = {
+  text: string;
+  author: string;
+  source: string;
+}

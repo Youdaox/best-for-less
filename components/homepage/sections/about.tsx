@@ -8,7 +8,7 @@ const About = () => {
     <div className="rounded-lg grid grid-cols-1 lg:grid-cols-2 py-10 px-2 lg:px-10 gap-12 sm:my-16">
       <div className="relative w-full h-80 lg:h-140 rounded-sm shadow-md overflow-hidden">
         <Image
-          src="/hero.png"
+          src="/about.jpg"
           fill
           className="object-cover"
           alt="Hero Image"
